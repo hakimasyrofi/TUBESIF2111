@@ -93,16 +93,7 @@ void BacaGraph (Graph * G);
 1 0 0
 */
 void TulisGraph (Graph G);
-// ? Untuk debugging doang kayaknya
 
-/*** PENAMBAHAN ELEMEN BERDASARKAN ALAMAT ***/
-
-/* I.S. Graph G terdefinisi */
-/* F.S. Semua elemen parent dimasukkan ke graph secara berurut */
+/* Mengirimkan banyaknya elemen parent graph; mengirimkan 0 jika graph kosong */
 
 int NbElmtGraph (Graph G);
-
-/****************** PENCARIAN SEBUAH GRAPH CHILD ******************/
-/* Mencari apakah ada elemen parent graph dengan Info(P)= X */
-/* Jika ada, mengirimkan address elemen tersebut. */
-/* Jika tidak ada, mengirimkan Nil */
