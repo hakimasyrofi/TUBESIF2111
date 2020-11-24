@@ -38,48 +38,42 @@ typedef struct {
 #define FirstG(L)     ((L).FirstG)
 
 /* ********** KONSTRUKTOR ********** */
+void MakeEmptyGraph (Graph * G);
 /* Konstruktor : create Graph kosong  */
-
 /* I.S. sembarang */
 /* F.S. Terbentuk graph kosong */
-void MakeEmptyGraph (Graph * G);
 
 /****************** Manajemen Memori ******************/
 
+addrGraph AlokasiGraph1 (urutan X);
 /* Mengirimkan addrGraph hasil alokasi sebuah elemen */
 /* Jika alokasi berhasil, maka addrGraph tidak Nil, dan misalnya */
 /* menghasilkan P, maka Info(P)=X, Next(P)=Nil, FirstChild(P)=Nil */
-/* Jika alokasi gagal, mengirimkan Nil */
-addrGraph AlokasiGraph1 (urutan X);
-
-/* Mengirimkan addrGraph2 hasil alokasi sebuah elemen */
-/* Jika alokasi berhasil, maka addrGraph2 tidak Nil, dan misalnya */
-/* menghasilkan P, maka Info(P)=X, Next(P)=Nil */
 /* Jika alokasi gagal, mengirimkan Nil */
 
 void DealokasiGraph1 (addrGraph * G);
 
 /* I.S. P terdefinisi; */
 /* F.S. P dikembalikan ke sistem */
-/* Melakukan dealokasi/pengembalian addrGraph2 P */
+/* Melakukan dealokasi/pengembalian addrGraph1 P */
 
 boolean IsEmptyGraph (Graph G);
 
 /* *** Test tabel penuh *** */
 
-/* Mengirimkan true jika Graph G penuh, mengirimkan false jika tidak */
 boolean IsFullGraph (Graph G);
-// ? Entah perlu fungsi ini gak ya?
+/* Mengirimkan true jika Graph G penuh, mengirimkan false jika tidak */
 
-/* Mengirimkan true jika addrGraph P kosong, mengirimkan false jika tidak */
 boolean IsEmptyParent (addrGraph P);
-
+/* Mengirimkan true jika addrGraph P kosong, mengirimkan false jika tidak */
 
 /* ********** KELOMPOK BACA/TULIS ********** */
 
+void BacaGraph (Graph * G);
 /* I.S. Graph G terdefinisi */
 /* F.S. Graph G berisi hubungan-hubungan antar bangunan */
-void BacaGraph (Graph * G);
+
+void TulisGraph (Graph G);
 // ! Ingat MakeEmptyGraph dan AddParent dulu
 // TODO: Prosedur ini dimasukkan ke ADT Mesin Kata
 
@@ -92,10 +86,8 @@ void BacaGraph (Graph * G);
 1 0 0
 1 0 0
 */
-void TulisGraph (Graph G);
-
-/* Mengirimkan banyaknya elemen parent graph; mengirimkan 0 jika graph kosong */
 
 int NbElmtGraph (Graph G);
+/* Mengirimkan banyaknya elemen parent graph; mengirimkan 0 jika graph kosong */
 
 #endif
