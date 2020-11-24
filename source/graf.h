@@ -97,3 +97,5 @@ void TulisGraph (Graph G);
 /* Mengirimkan banyaknya elemen parent graph; mengirimkan 0 jika graph kosong */
 
 int NbElmtGraph (Graph G);
+
+#endif
